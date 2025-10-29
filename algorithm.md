@@ -1,12 +1,16 @@
 //First question to user, filter from dataset to list1.
 Write "Do you prefer hot or cold cereals for breakfast?" 
 Read typePref 
+IF (typePref = "cold") set typePref to "C" 
+ELSE set typePref to "H"
 Set list1 to empty 
 FOR each cereal IN cereals 
     IF cereal.type == typePref 
     ADD cereal TO list1 
 END FOR 
 Set remaining = count(list1) 
+IF (typePref = "C") set typePref to "cold" 
+ELSE set typePref to "hot"
 Write "After chosing {typePref} cereals, {remaining} options remain."
 
 //Second question to user, filter from list1 to list2
@@ -64,4 +68,5 @@ FOR each cereal IN finalList
     IF clickX = CLOSE popupbox 
     ELSE don’t show popupbox
 END FOR
+
 
