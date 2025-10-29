@@ -188,3 +188,8 @@ a:visited {
   height: 700px;
   background-color: rgba(181, 211, 229);
 }
+
+footer img {
+  padding: 20px;
+  height: 40px;
+}
