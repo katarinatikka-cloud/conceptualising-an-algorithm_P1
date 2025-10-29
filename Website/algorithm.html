@@ -19,37 +19,36 @@
           <a href="people.html">PEOPLE</a>
         </div>
     </header>
-    <div>
-    <h1>Our Algorithm</h1>
-    <p>Deciding what cereals to buy can be a nightmare if you don't know where to start. Our solution will make it easier to decide by narrowing down the choices. The algorithm provides a curated list of recommended cereals according to user preferences. </p>
-<h2>Mockup Algorithm</h2>
-<p>We did a mockup algorithm to better get a idea of what we wanted our algorithm to accomplish</p>
 
-    <p id="openPopup">Press for Mockup Algorithm</p>
+    <div>
+      <h1>Our Algorithm</h1>
+      <p>Deciding what cereals to buy can be a nightmare if you don't know where to start. Our solution will make it easier to decide by narrowing down the choices. The algorithm provides a curated list of recommended cereals according to user preferences. </p>
+      <h2>Mockup Algorithm</h2>
+      <p>We did a mockup algorithm to better get a idea of what we wanted our algorithm to accomplish</p>
+
+      <p id="openPopup">Press for Mockup Algorithm</p>
 
   <div id="popupBox" class="hidden">
     <h2>Mockup algorithm</h2>
-<ol type="1">
-<li>The user get the question: "Do you prefer hot or cold cereals for breakfast?"¨</li>
-<li>The user answer “hot” or “cold”</li>
-<li>The computer creates a list with the chosen type and show the user the number of how many cereals is on the list.</li>
-<li>The user get the question: "How important is your calory intake for you? The user gets the alternatives: “important”, “matters” or “not important”"</li>
-<li>The user answer one of the options.</li>
-<li>If the list goes down to zero tell the user “You don’t have any cereals left, we kept your previous list, lets move on to the next question” The computer use the previous list.</li>
-<li>The computer make a new list from the chosen answer and shows the numbers of cereals left for the user.</li>
-<li>The user get the question "Would you say that you have a sweet tooth? i.e should
-your cereals be sweet? Yes/No"</li>
-<li>The user answer “yes” or “no”</li>
-<li>If the list goes down to zero tell the user “You don’t have any cereals left, we kept your previous list, lets move on to the next question” The computer use the previous list.</li>
-<li>New list and new number</li>
-<li>The user get the question: "Is fiber important to you?"</li>
-<li>Answer “yes” or “no”</li>
-<li>The user gets a list with all the cereals remaining.</li>
-</ol>
+    <ol type="1">
+      <li>The user get the question: "Do you prefer hot or cold cereals for breakfast?"¨</li>
+      <li>The user answer “hot” or “cold”</li>
+      <li>The computer creates a list with the chosen type and show the user the number of how many cereals is on the list.</li>
+      <li>The user get the question: "How important is your calory intake for you? The user gets the alternatives: “important”, “matters” or “not important”"</li>
+      <li>The user answer one of the options.</li>
+      <li>If the list goes down to zero tell the user “You don’t have any cereals left, we kept your previous list, lets move on to the next question” The computer use the previous list.</li>
+      <li>The computer make a new list from the chosen answer and shows the numbers of cereals left for the user.</li>
+      <li>The user get the question "Would you say that you have a sweet tooth? i.e should your cereals be sweet? Yes/No"</li>
+      <li>The user answer “yes” or “no”</li>
+      <li>If the list goes down to zero tell the user “You don’t have any cereals left, we kept your previous list, lets move on to the next question” The computer use the previous list.</li>
+      <li>New list and new number</li>
+      <li>The user get the question: "Is fiber important to you?"</li>
+      <li>Answer “yes” or “no”</li>
+      <li>The user gets a list with all the cereals remaining.</li>
+    </ol>
   </div>
 
-
-    <h2>Attributes</h2>
+  <h2>Attributes</h2>
     <p>There are four main attributes in our algorithm based on the dataset we curated:</p> 
       <list>
         
@@ -59,12 +58,10 @@ your cereals be sweet? Yes/No"</li>
         <li><b>fibre, float, 4.5</b> is our fourth attribute for the ones who need help with their gut health i.e fibre intake: </li>
       </list>
 
-  
-    
-    <h2>UX and Flow</h2>
-    <p>When asking the user about their preferences we could choose to either show results after each preference is answered and filtered, or we could choose to show the results after collecting all the answers to the questions. At first the idea was to use all filters at once but since we know that there aren't many hot options and that low calories and high sugars might become an impossible equation we decided on transparancy by showing the narrowing down for each step</p>
-    <p>The type of cereal, hot or cold, should come first. We know there aren't many hot option so if someone prefers hot cereals this might be the only question needed to provide a narrow list. The users choosing cold will get more to choose from and will be prompted to answer the next question which is calories. It's an important factor for people trying to lose or maintain their weight, once again it could prove to narrow down the list enough for a result. The sweet tooth question is tying in nicely to the calories one, if calories aren't important to you then let's try it from the other side, is sugar important for you?</p>
-    <p>For scalability reasons, we don't think it's advisable to show the full results after each question. Our dataset is small, but imagine a set with thousands of cereals. It would be overwhelming and not helpful for the user to see all the options. Inbetween questions it's enough to share how many cereals remain. Possibly with a bit of narrating on what the filter has done. The final list presented should contain all the attributes necessary for the user to make an informed decision.</p>
+      <h2>UX and Flow</h2>
+      <p>When asking the user about their preferences we could choose to either show results after each preference is answered and filtered, or we could choose to show the results after collecting all the answers to the questions. At first the idea was to use all filters at once but since we know that there aren't many hot options and that low calories and high sugars might become an impossible equation we decided on transparancy by showing the narrowing down for each step</p>
+      <p>The type of cereal, hot or cold, should come first. We know there aren't many hot option so if someone prefers hot cereals this might be the only question needed to provide a narrow list. The users choosing cold will get more to choose from and will be prompted to answer the next question which is calories. It's an important factor for people trying to lose or maintain their weight, once again it could prove to narrow down the list enough for a result. The sweet tooth question is tying in nicely to the calories one, if calories aren't important to you then let's try it from the other side, is sugar important for you?</p>
+      <p>For scalability reasons, we don't think it's advisable to show the full results after each question. Our dataset is small, but imagine a set with thousands of cereals. It would be overwhelming and not helpful for the user to see all the options. Inbetween questions it's enough to share how many cereals remain. Possibly with a bit of narrating on what the filter has done. The final list presented should contain all the attributes necessary for the user to make an informed decision.</p>
     </div>
 </body>
 
