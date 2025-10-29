@@ -13,10 +13,10 @@ Write "After chosing {typePref} cereals, {remaining} options remain."
 Write "How important is your calory intake for you? Please answer by writing: important, matters or not important" 
 Read calPref 
 IF calPref = "important" 
-    set maxCalories 50 
+    set maxCalories 320 
 ELSE IF calPref ="matters" 
-    set maxCalories 80 
-ELSE set maxCalories 999 
+    set maxCalories 380 
+ELSE set maxCalories 9999 
 set list2 to empty 
 FOR each cereal in list1 
  IF cereal.calories <= maxCalories 
@@ -31,12 +31,12 @@ Read sweetTooth
 Set list3 empty 
 IF sweetTooth = "yes" 
     FOR each cereal in list2 
-        IF cereal.sugar >10 
+        IF cereal.sugar >20 
         ADD cereal TO list3 
     END FOR 
 ELSE 
     FOR each cereal in list2 
-        IF cereal.sugar <=10 
+        IF cereal.sugar <=20 
         ADD cereal TO list3 
     END FOR 
 Set remaining = count(list3) 
@@ -50,23 +50,17 @@ IF fiberPref = "yes"
     SORT finalList BY fiber DESCENDING
 END IF
 
-//Show popupbox (with brand information when clicking on object in list of suggested cereals)//
+//Show popupbox (with brand information when clicking on object in list of suggested cereals)
 FUNCTION showPopupbox(cereal)
 FUNCTION closePopupbox()
-Write “For more information about the cereal please click on cereal of interest”
-FOR each cereal IN finalList ADD popup box
-    Write in popup box cereal.name, cereal.type, cereal.calories, cereal.sugar, cereal.fiber
-WAIT for user to click a cereal = READ clickCereal
-WAIT for user to close a popupbox = READ clickX
-IF clickCereal = DISPLAY related popupbox THEN
-IF clickX = CLOSE popupbox 
-ELSE don’t show popupbox
-
-RETURN to finalist
-END FOR
-
-//This is the final output. This is where we decide what information to pull from our dataset and post to the user. Currently it's only attributes we've asked about
-Write "Here are your best matches!"
-FOR each cereal IN finalList
-    Write cereal.name, cereal.type, cereal.calories, cereal.sugar, cereal.fiber
+Write “Here are your final results. For more information about the cereal please click on cereal of interest”
+FOR each cereal IN finalList 
+    ADD popup
+    WRITE cereal.name
+    Write in popup box cereal.name "-" cereal.mnf "Calories per 100g:" cereal.calories "Protein(g) per 100g:" cereal.protein "Fat (g) per 100g: cereal.fat "Sodium (mg) per 100g:" cereal.sodium "Fiber (g) per 100g:" cereal.fiber "Carbohydrates (g) per 100g:" cereal.carbo "Sugar (g) per 100g:" cereal.sugar "Potassium (mg) per 100g" cereal.potass
+    WAIT for user to click a cereal.name = READ clickCereal
+    WAIT for user to close a popupbox = READ clickX
+    IF clickCereal = DISPLAY related popupbox THEN
+    IF clickX = CLOSE popupbox 
+    ELSE don’t show popupbox
 END FOR
