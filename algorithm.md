@@ -29,7 +29,7 @@ END FOR
 
 //Safety measure if the list should become empty go back to previous list
 IF count(list2) = 0 
-Write "Ooops, no cereals match your criteria. Let's go back one step and try a broader filter. 
+Write "Ooops, no cereals match your criteria. Let's go back one step and try a broader filter." 
 Set list2 = list1 
 set remaining = count(list2) 
 Write "You are back at having {remaining} cereals left." 
@@ -54,7 +54,7 @@ ELSE
 
 //Safety measure if the list should become empty go back to previous list
 IF count(list3) = 0 
-Write "Ooops, no cereals match your criteria. Let's go back one step and try a broader filter. 
+Write "Ooops, no cereals match your criteria. Let's go back one step and try a broader filter." 
 Set list3 = list2 
 set remaining = count(list3) 
 Write "You are back at having {remaining} cereals left." 
