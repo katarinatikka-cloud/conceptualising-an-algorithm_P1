@@ -102,7 +102,7 @@ img.copyright_logo {
 }
 
 #openDatapop {
- background-color:#7f90a1;;
+ background-color:#7f90a1;
  width:300px;
  margin: auto;
  text-align: center;
@@ -110,6 +110,7 @@ img.copyright_logo {
  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
  border-radius: 10px;
  padding: 10px;
+ cursor: pointer;
 }
 
 #dataPop {
@@ -130,23 +131,21 @@ img.copyright_logo {
   display: block;
 }
 
-
-
-a {
+.navigation{
   font-size: 20px;
   padding: 10px;
 }
 
-a:hover {
+.navigation:hover {
 background-color:#7f90a1;
 }
 
-a:link {
+.navigation:link {
   color: black;
   text-decoration: none;
 }
 
-a:visited {
+.navigation:visited {
   color: black;
   text-decoration: none;
  }
@@ -157,7 +156,7 @@ a:visited {
   justify-content: center;
   align-items: center;
   gap: 20px;
-  background-color: rgba(181, 211, 229, 0.9);
+  background-color: rgba(181, 211, 229);
   height: 700px;
 }
 
@@ -165,11 +164,12 @@ a:visited {
   width: 25%;
   opacity: 0.6;
   transition: opacity 0.3s ease;
+
 }
 
 .firstpage img:hover {
   opacity: 1;
-  transform: scale(1.05);      /* zoomar in lite */
+  transform: scale(1.05);
 }
 
 .text-image-box {
@@ -192,4 +192,32 @@ a:visited {
 footer img {
   padding: 20px;
   height: 40px;
+}
+
+.text {
+  background-color: rgba(181, 211, 229);
+  margin: auto;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.hide {
+  display: none;
+  height: 2000px;
+}
+    
+.myDIV:hover + .hide {
+  display: block;
+}
+
+.myDIV {
+  background-color: #7f90a1;;
+  padding: 10px;
+  height: 25px;
+  font-size: 20px;
+  width: 200px;
+  margin: auto;
+  border-radius: 25px;
+
+  cursor: pointer;
 }
